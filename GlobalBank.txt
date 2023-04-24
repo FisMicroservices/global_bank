@@ -1,0 +1,84 @@
+Global Bank:
+------------
+
+UserService:
+------------
+
+user registration table
+
+1.RegisterUser
+
+create table registeruser(user_id int , firstname varchar(20),
+lastname varchar(20),mobile_num int,address varchar(50));
+
+
+
+
+insert into registeruser values(101,'kavya','chilakala',934793435,'cpt'),
+(102,'divya','chilakala',934793535,'gnt'),
+(103,'navya','koppuravuri',934372335,'pdg');
+
+2.LoanTable
+
+create table loans(loan_id int primary key,
+account_num int(16),loan_amount int,balance int,id int);
+
+insert into loans values(801,401,10000,2000,501),
+(802,403,50000,5000,503),
+(805,402,20000,3000,502);
+
+3.AccountTable
+create table account(account_num int(16) primary key, customer_id int ,
+ account_type varchar(10),opening_date date,branch_id int);
+
+insert into account values(401,101,'savings','2023-03-12',503),
+(402,103,'savings','2023-06-18',504),
+(403,101,'savings','2023-04-22',502),
+(404,102,'savings','2023-07-21',501);
+
+
+4.branchTable:
+
+create table branch(id int ,name varchar(15),city varchar(15));
+
+insert into branch values(501,'sbi-hyd','hyd'),
+(502,'sbi-delhi','delhi'),
+(503,'sbi-chennai','chennai'),
+(504,'sbi-vjw','vjw');
+
+
+5.Table transactions:-
+	create table transactions(transaction_id int primary key,
+account_num int(16),transaction_type varchar(10),transaction_date date);
+
+insert into transactions values(601,401,'deposit','2023-04-14'),
+(602,403,'withdraw','2023-02-14'),
+(603,402,'deposit','2023-01-01'),
+(604,403,'deposit','2023-04-2');
+
+
+
+
+6.table users
+create table users(user_id int , username varchar(20),password varchar(30),roles varchar(10),enabled int);
+ insert into users values(901,'kavya','kavya','user',1);
+insert into users values(902,'snehal','snehal','admin',1);
+ insert into users values(903,'kumar','1234','user',0);
+
+
+7. table registerusers
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
